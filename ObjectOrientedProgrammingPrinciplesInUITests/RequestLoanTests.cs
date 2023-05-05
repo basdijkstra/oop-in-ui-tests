@@ -2,8 +2,6 @@
 using ObjectOrientedProgrammingPrinciplesInUITests.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System;
 
 namespace ObjectOrientedProgrammingPrinciplesInUITests
 {
@@ -25,7 +23,7 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests
                 .LoginAs("john", "demo");
 
             new AccountsOverviewPage(driver)
-                .GoToRequestLoanPage();
+                .SelectMenuItem("Request Loan");
 
             RequestLoanPage rlp = new RequestLoanPage(driver);
 
