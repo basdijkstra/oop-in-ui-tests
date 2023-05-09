@@ -29,7 +29,7 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests
 
             rlp.SubmitLoanApplication("10000", "1000", "12345");
 
-            Assert.That(rlp.GetLoanApplicationResult(), Is.EqualTo("Denied"));            
+            Assert.That(rlp.GetLoanApplicationResult(), Is.EqualTo("Denied"));    
         }
 
         [Test]
@@ -40,6 +40,12 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests
                 new LoginPage(driver)
                     .SelectMenuItem("Some menu item");
             });
+        }
+
+        [Test]
+        public void CreateNewLoginPage_CheckThatCorrectPageIsOpened()
+        {
+            Assert.That(new LoginPage(driver).IsOpened(), Is.True);
         }
 
         [TearDown]

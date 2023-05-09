@@ -2,7 +2,7 @@
 
 namespace ObjectOrientedProgrammingPrinciplesInUITests.Pages
 {
-    public class LoginPage : BasePage
+    public class LoginPage : BasePage, IPage
     {
         private readonly By textfieldUsername = By.Name("username");
         private readonly By textfieldPassword = By.Name("password");
@@ -23,6 +23,11 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests.Pages
         public override void SelectMenuItem(string menuItem)
         {
             throw new NotImplementedException();
+        }
+
+        public bool IsOpened()
+        {
+            return this.GetPageTitle().Equals("ParaBank | Welcome | Online Banking");
         }
     }
 }

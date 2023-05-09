@@ -97,6 +97,11 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests.Pages
             return string.Empty;
         }
 
+        public string GetPageTitle()
+        {
+            return driver.Title;
+        }
+
         public virtual void SelectMenuItem(string menuItem)
         {
             Click(By.LinkText(menuItem));
