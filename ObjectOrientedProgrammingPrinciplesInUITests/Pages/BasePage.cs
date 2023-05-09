@@ -97,7 +97,7 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests.Pages
             return string.Empty;
         }
 
-        public void SelectMenuItem(string menuItem)
+        public virtual void SelectMenuItem(string menuItem)
         {
             Click(By.LinkText(menuItem));
         }

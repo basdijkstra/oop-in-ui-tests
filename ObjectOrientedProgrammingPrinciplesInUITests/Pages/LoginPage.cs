@@ -19,5 +19,10 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests.Pages
             SendKeys(textfieldPassword, password);
             Click(buttonDoLogin);
         }
+
+        public override void SelectMenuItem(string menuItem)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

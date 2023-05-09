@@ -32,6 +32,16 @@ namespace ObjectOrientedProgrammingPrinciplesInUITests
             Assert.That(rlp.GetLoanApplicationResult(), Is.EqualTo("Denied"));            
         }
 
+        [Test]
+        public void CallSelectMenuItemFromLoginPage_ShouldThrowNotImplementedException()
+        {
+            Assert.Throws<NotImplementedException>(() =>
+            {
+                new LoginPage(driver)
+                    .SelectMenuItem("Some menu item");
+            });
+        }
+
         [TearDown]
         public void StopBrowser()
         {
